@@ -1,0 +1,17 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Times New Roman", Times, serif;
+}
+
+body {
+    height:100vh;
+    font-size: 18px;
+    color: black;
+    background-color: #7D5bA6;
+    margin: 0 auto;
+    padding: 0;
+}
