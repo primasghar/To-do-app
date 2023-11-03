@@ -1,20 +1,50 @@
 .container {
   padding: 5px;
   display: flex;
-  /*width: 600px;*/
 }
-
-/*.inputLabel {*/
-/*  font-size: 24px;*/
-/*  font-weight: 700;*/
-/*  margin: 10px;*/
-/*}*/
 
 .inputField {
-  font-size: 18px;
-  width: 800px;
   border: 4px solid black;
   box-shadow: 10px 10px black;
-  margin: 0 20px;
+
   padding: 8px;
 }
+
+/*--------------media--------------*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .inputField {
+    font-size: 16px;
+    width: 300px;
+    margin: 0 10px;
+    border: 2px solid black;
+    box-shadow: 5px 5px black;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .inputField {
+    font-size: 16px;
+    width: 400px;
+    margin: 0 10px;
+
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .inputField {
+    font-size: 18px;
+    width: 800px;
+    margin: 0 20px;
+  }
+
+}
+
