@@ -98,31 +98,73 @@ function ToDo() {
   const saveTaskHandler = (enteredTaskData) => addTaskToOpen(enteredTaskData);
 
   return (
-    <main className={classes.wrapper}>
-      <div className={classes.Head}>
-        <Icon icon={clipboard} size={50} style={{ color: "#ffffff" }} />
-        <h1 className={classes.heading}>To do</h1>
+    <div className={classes.container}>
+      <div className={classes.shape}>
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z"
+            className="shape-fill"
+          ></path>
+        </svg>
       </div>
-      <div className={classes.enterData}>
-        <AddForm onSaveTask={saveTaskHandler} />
+
+      <main className={classes.wrapper}>
+        <div className={classes.Head}>
+          <Icon icon={clipboard} size={50} style={{ color: "#ffffff" }} />
+          <h1 className={classes.heading}>To do</h1>
+        </div>
+        <div className={classes.enterData}>
+          <AddForm onSaveTask={saveTaskHandler} />
+        </div>
+        <section className={classes.openList}>
+          <h2 className={classes.headline1}>Open Tasks </h2>
+          <ToDoList
+            tasks={openTasks}
+            handleTask={handleOpenTask}
+            handleRemoval={handleOpenRemoveTask}
+          />
+        </section>
+        <section className={classes.doneList}>
+          <h2 className={classes.headline2}>Done Tasks</h2>
+          <ToDoList
+            tasks={doneTasks}
+            handleTask={handleDoneTask}
+            handleRemoval={handleDoneRemoveTask}
+          />
+        </section>
+      </main>
+      {/*<div className={classes.shapeBottom}>*/}
+      {/*  <svg*/}
+      {/*    data-name="Layer 1"*/}
+      {/*    xmlns="http://www.w3.org/2000/svg"*/}
+      {/*    viewBox="0 0 1200 120"*/}
+      {/*    preserveAspectRatio="none"*/}
+      {/*  >*/}
+      {/*    <path*/}
+      {/*      d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z"*/}
+      {/*      className="shape-fill"*/}
+      {/*    ></path>*/}
+      {/*  </svg>*/}
+      {/*</div>*/}
+      <div className={classes.triAngle}>
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z"
+            className="shape-fill"
+          ></path>
+        </svg>
       </div>
-      <section className={classes.openList}>
-        <h2 className={classes.headline1}>Open Tasks </h2>
-        <ToDoList
-          tasks={openTasks}
-          handleTask={handleOpenTask}
-          handleRemoval={handleOpenRemoveTask}
-        />
-      </section>
-      <section className={classes.doneList}>
-        <h2 className={classes.headline2}>Done Tasks</h2>
-        <ToDoList
-          tasks={doneTasks}
-          handleTask={handleDoneTask}
-          handleRemoval={handleDoneRemoveTask}
-        />
-      </section>
-    </main>
+    </div>
   );
 }
 

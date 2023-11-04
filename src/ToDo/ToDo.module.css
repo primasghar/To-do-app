@@ -147,9 +147,74 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+    .container{
+        position:relative;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .shape {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+
+    .shape svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 100px;
+    }
+
+    .shape .shape-fill {
+        fill: #000000;
+    }
+
+    .shapeBottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+
+    .shapeBottom svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 100px;
+    }
+
+    .shapeBottom .shape-fill {
+        fill: #000000;
+    }
+
+    .triAngle {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+
+    .triAngle svg {
+        position: relative;
+        display: block;
+        width: calc(228% + 1.3px);
+        height: 299px;
+    }
+
+    .triAngle .shape-fill {
+        fill: #000000;
+    }
     .wrapper {
         grid-template-rows: 130px 100px auto;
         grid-template-columns:  repeat(6, 180px);
-
     }
 }
