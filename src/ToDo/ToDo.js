@@ -8,7 +8,7 @@ import classes from "./ToDo.module.css";
 import { Icon } from "react-icons-kit";
 import { clipboard } from "react-icons-kit/icomoon/clipboard";
 
-import { Scrollbar } from 'react-scrollbars-custom';
+import { Scrollbars } from 'react-custom-scrollbars';
 
 import {
   findTaskIndex,
@@ -33,6 +33,16 @@ function ToDo() {
       setDoneTasks(loadedDoneTasks);
     }
   }, []);
+
+  const renderThumb = ({ style, ...props }) => {
+    const thumbStyle = {
+      backgroundColor: '#000000',
+
+    };
+
+    return <div style={{ ...style, ...thumbStyle }} {...props} />;
+  };
+
 
   const addTaskToOpen = (openTask) => {
     setOpenTasks((prevTasks) => {
@@ -125,23 +135,23 @@ function ToDo() {
         </div>
         <section className={classes.openList}>
           <h2 className={classes.headline1}>Open Tasks </h2>
-          <Scrollbar style={{ width: "100%", height: "100%"}}>
+          <Scrollbars  style={{ height: '100%' }} renderThumbVertical={renderThumb}  autoHide>
           <ToDoList
             tasks={openTasks}
             handleTask={handleOpenTask}
             handleRemoval={handleOpenRemoveTask}
-          /></Scrollbar>
+          /></Scrollbars>
         </section>
         <section className={classes.doneList}>
           <h2 className={classes.headline2}>Done Tasks</h2>
-          <Scrollbar style={{ width: "100%", height: "100%"}}>
+          <Scrollbars style={{ height: '100%' }} renderThumbVertical={renderThumb} autoHide>
           <ToDoList
             tasks={doneTasks}
             handleTask={handleDoneTask}
-            handleRemoval={handleDoneRemoveTask}
-          /></Scrollbar>
+            handleRemoval={handleDoneRemoveTask}/>
+          </Scrollbars>
         </section>
-      </main>
+    </main>
     </div>
   );
 }

@@ -266,14 +266,14 @@
 
     .wrapper {
         grid-template-rows: 150px 100px auto;
-        grid-template-columns:  repeat(6, 180px);
+        grid-template-columns:  repeat(6, 200px);
     }
 
 
     .openList,
     .doneList {
-        width: 540px;
-        height: 745px;
+        width: 590px;
+        height: 760px;
         border-radius: 5px;
         overflow: hidden;
     }
