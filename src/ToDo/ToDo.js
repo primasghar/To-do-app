@@ -8,6 +8,8 @@ import classes from "./ToDo.module.css";
 import { Icon } from "react-icons-kit";
 import { clipboard } from "react-icons-kit/icomoon/clipboard";
 
+import { Scrollbar } from 'react-scrollbars-custom';
+
 import {
   findTaskIndex,
   filteredTasks,
@@ -123,19 +125,21 @@ function ToDo() {
         </div>
         <section className={classes.openList}>
           <h2 className={classes.headline1}>Open Tasks </h2>
+          <Scrollbar style={{ width: "100%", height: "100%"}}>
           <ToDoList
             tasks={openTasks}
             handleTask={handleOpenTask}
             handleRemoval={handleOpenRemoveTask}
-          />
+          /></Scrollbar>
         </section>
         <section className={classes.doneList}>
           <h2 className={classes.headline2}>Done Tasks</h2>
+          <Scrollbar style={{ width: "100%", height: "100%"}}>
           <ToDoList
             tasks={doneTasks}
             handleTask={handleDoneTask}
             handleRemoval={handleDoneRemoveTask}
-          />
+          /></Scrollbar>
         </section>
       </main>
     </div>
