@@ -27,7 +27,7 @@ const AddForm = (props) => {
         className={classes.inputField}
         onChange={onInputChange}
         value={enteredTask}
-        placeholder={"Enter task here"}
+        placeholder={"Enter the task"}
       />
       <Button type="submit">Add</Button>
     </form>
