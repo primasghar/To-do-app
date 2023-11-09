@@ -1,7 +1,8 @@
 .container {
     height: 100vh;
-    position:relative;
+    position: relative;
 }
+
 .shape {
     position: absolute;
     top: 0;
@@ -28,9 +29,19 @@
 }
 
 .doneList {
-    background-color:rgb(80,255,175); /*50FFAF*/
+    background-color: rgb(80, 255, 175); /*50FFAF*/
 
+}
 
+.openBadge,
+.doneBadge {
+    /*background-color: white;*/
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0 5px;
+    box-shadow: 2px 2px black;
+    margin-left: 8px;
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
@@ -76,7 +87,6 @@
         overflow: hidden;
     }
 
-  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -112,6 +122,7 @@
     .headline2 {
         margin: 0;
     }
+
     .openList,
     .doneList {
         width: 500px;
@@ -181,9 +192,9 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    .container{
+    .container {
         height: 100vh;
-        position:relative;
+        position: relative;
         display: flex;
         flex-direction: column;
     }
