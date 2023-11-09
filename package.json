@@ -29,8 +29,10 @@
   },
   "dependencies": {
     "react": "^18.2.0",
+    "react-beautiful-dnd": "^13.1.1",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^18.2.0",
-    "react-icons-kit": "^2.0.0"
+    "react-icons-kit": "^2.0.0",
+    "react-toastify": "^9.1.3"
   }
 }

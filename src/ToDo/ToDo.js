@@ -8,6 +8,9 @@ import classes from "./ToDo.module.css";
 import {Icon} from "react-icons-kit";
 import {clipboard} from "react-icons-kit/icomoon/clipboard";
 
+
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {Scrollbars} from 'react-custom-scrollbars';
 
 import {
@@ -59,10 +62,10 @@ function ToDo() {
         });
     };
     //Task removal from open task list and adding it to done task list.
-    const handleOpenTask = (openTasks,taskToDone) => {
+    const handleOpenTask = (openTasks, taskToDone) => {
         const filteredOpenTasks = filteredTasks(
             openTasks,
-            findTaskIndex(openTasks,taskToDone),
+            findTaskIndex(openTasks, taskToDone),
         );
         setOpenTasks(filteredOpenTasks);
         saveToLocalHost("openTasks", filteredOpenTasks);
@@ -143,6 +146,7 @@ function ToDo() {
                     </Scrollbars>
                 </section>
             </main>
+            <ToastContainer/>
         </div>
     );
 }

@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import classes from "./AddForm.module.css";
 import Button from "../../../Shared/Button";
 
+
+import {toast} from 'react-toastify';
+
 const AddForm = (props) => {
   const [enteredTask, setEnteredTask] = useState("");
 
@@ -12,11 +15,19 @@ const AddForm = (props) => {
   const submitHandler = (event) => {
     event.preventDefault();
 
-    const taskData = {
+    if (enteredTask.length === 0){
+     return  toast.error("Please write in the input!", {
+       theme: "dark",
+     });
+    }
+    else {
+      const taskData = {
       text: enteredTask,
     };
-    props.onSaveTask(taskData);
-    setEnteredTask("");
+      props.onSaveTask(taskData);
+      setEnteredTask("");}
+
+
   };
 
   return (
