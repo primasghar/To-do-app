@@ -17,15 +17,16 @@
 .itemButtons {
     display: flex;
     padding: 4px;
+    margin-right:4px ;
 }
 
 
 .delBtn {
     height: 32px;
     padding: 5px 10px;
-    border: 0.5px solid black;
+    /*border: 0.5px solid black;*/
     border-radius: 5px;
-    box-shadow: 2px 2px black;
+    box-shadow:  2px 2px 2px 2px black;
 }
 
 .delBtn {
@@ -37,9 +38,9 @@
     display: flex;
     flex-direction: column;
     padding: 0 10px;
-    border: 0.5px solid black;
+    /*border: 0.5px solid black;*/
     border-radius: 5px;
-    box-shadow: 2px 2px black;
+    box-shadow:  2px 2px 2px 2px black;
 }
 
 .shuffle:hover,

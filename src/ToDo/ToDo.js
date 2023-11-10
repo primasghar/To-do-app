@@ -94,13 +94,11 @@ function ToDo() {
 //Removing task from done list
     const handleDoneRemoveTask = (event, tasks, toRemove) => {
         const remainderTasks = filteredTasks(tasks, findTaskIndex(tasks, toRemove));
-
         setDoneTasks(remainderTasks);
-
         saveToLocalHost("doneTasks", remainderTasks);
         event.stopPropagation();
     };
-
+//Fn for adding task from form to open list
     const saveTaskHandler = (enteredTaskData) => addTaskToOpen(enteredTaskData);
 
     return (
@@ -124,27 +122,33 @@ function ToDo() {
                     <Icon icon={clipboard} size={50} style={{color: "#ffffff"}}/>
                     <h1 className={classes.heading}>To do</h1>
                 </div>
+
                 <div className={classes.enterData}>
                     <AddForm onSaveTask={saveTaskHandler}/>
                 </div>
+
                 <section className={classes.openList}>
-                    <h2 className={classes.headline1}>Open Tasks  <span className={classes.openBadge}>{openTasks.length}</span></h2>
+                    <h2 className={classes.headline1}>Open Tasks - <span className={classes.openBadge}>{openTasks.length}</span></h2>
                     <Scrollbars style={{height: '100%'}} renderThumbVertical={renderThumb} autoHide>
                         <ToDoList
+                            id={"open"}
                             tasks={openTasks}
                             handleTask={handleOpenTask}
                             handleRemoval={handleOpenRemoveTask}
                         /></Scrollbars>
                 </section>
+
                 <section className={classes.doneList}>
-                    <h2 className={classes.headline2}>Done Tasks  <span className={classes.doneBadge}>{doneTasks.length}</span></h2>
+                    <h2 className={classes.headline2}>Done Tasks - <span className={classes.doneBadge}>{doneTasks.length}</span></h2>
                     <Scrollbars style={{height: '100%'}} renderThumbVertical={renderThumb} autoHide>
                         <ToDoList
+                            id={"done"}
                             tasks={doneTasks}
                             handleTask={handleDoneTask}
                             handleRemoval={handleDoneRemoveTask}/>
                     </Scrollbars>
                 </section>
+
             </main>
             <ToastContainer/>
         </div>
