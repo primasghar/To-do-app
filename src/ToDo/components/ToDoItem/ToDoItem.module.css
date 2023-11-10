@@ -14,10 +14,50 @@
     padding: 0 8px;
 }
 
-.del {
-
-    padding: 10px 20px;
+.itemButtons {
+    display: flex;
+    padding: 4px;
 }
+
+
+.delBtn {
+    height: 32px;
+    padding: 5px 10px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px black;
+}
+
+.delBtn {
+    margin-right: 10px;
+}
+
+.shuffle {
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px black;
+}
+
+.shuffle:hover,
+.delBtn:hover {
+    transform: scale(1.1);
+}
+
+.arrowLeft {
+    align-self: end;
+    padding-top:2px ;
+    margin-bottom: -4px;
+}
+
+.arrowRight {
+    align-self: start;
+    margin-top: -6px;
+}
+
 
 /*--------------media--------------*/
 
@@ -29,6 +69,25 @@
         border: 2px solid black;
         box-shadow: 2px 2px black;
     }
+
+    .delBtn {
+        height: 28px;
+        margin-right: 8px;
+        padding: 2px 8px;
+    }
+
+
+    .shuffle {
+        height: 28px;
+        padding: 0 8px;
+    }
+
+    .arrowLeft {
+        padding-top:0;
+        margin-bottom: -5px;
+    }
+
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
