@@ -128,7 +128,11 @@ function ToDo() {
                 </div>
 
                 <section className={classes.openList}>
-                    <h2 className={classes.headline1}>Open Tasks -<span className={classes.openBadge}>{openTasks.length}</span></h2>
+                    <div className={classes.list_1Heading}>
+                        <h2 className={classes.headline1}>Open Tasks -</h2><span
+                        className={classes.openBadge}>{openTasks.length}</span>
+                    </div>
+
                     <Scrollbars style={{height: '100%'}} renderThumbVertical={renderThumb} autoHide>
                         <ToDoList
                             id={"open"}
@@ -139,7 +143,11 @@ function ToDo() {
                 </section>
 
                 <section className={classes.doneList}>
-                    <h2 className={classes.headline2}>Done Tasks -<span className={classes.doneBadge}>{doneTasks.length}</span></h2>
+                    <div className={classes.list_2Heading}>
+                        <h2 className={classes.headline2}>Done Tasks -</h2><span
+                        className={classes.doneBadge}>{doneTasks.length}</span>
+                    </div>
+
                     <Scrollbars style={{height: '100%'}} renderThumbVertical={renderThumb} autoHide>
                         <ToDoList
                             id={"done"}

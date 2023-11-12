@@ -25,7 +25,7 @@
 }
 
 .openList {
-    background-color: #FDFD96;
+    background-color: hsl(60, 96%, 79%); /*#FDFD96;*/
 }
 
 .doneList {
@@ -33,10 +33,28 @@
 
 }
 
+.list_1Heading,
+.list_2Heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    padding: 10px 0 12px 0;
+}
+
+
+.headline1,
+.headline2 {
+    margin: 0;
+    text-align: center;
+}
+
 .openBadge,
 .doneBadge {
-    margin-left: 8px;
+    font-size: 20px;
+    font-weight: 700;
 }
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
@@ -66,10 +84,6 @@
         margin-bottom: 16px;
     }
 
-    .headline1,
-    .headline2 {
-        margin: 0;
-    }
 
     .openList,
     .doneList {
@@ -109,14 +123,9 @@
     }
 
     .enterData {
-        /*padding: 0;*/
         margin-bottom: 20px;
     }
 
-    .headline1,
-    .headline2 {
-        margin: 0;
-    }
 
     .openList,
     .doneList {
