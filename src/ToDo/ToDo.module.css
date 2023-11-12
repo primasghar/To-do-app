@@ -35,8 +35,6 @@
 
 .openBadge,
 .doneBadge {
-    padding: 0 5px;
-    box-shadow: 2px 2px 2px 2px black;
     margin-left: 8px;
 }
 /* Extra small devices (phones, 600px and down) */
