@@ -42,7 +42,6 @@
     padding: 10px 0 12px 0;
 }
 
-
 .headline1,
 .headline2 {
     margin: 0;
@@ -164,7 +163,6 @@
         color: white;
         font-size: 60px;
         text-align: center;
-
     }
 
     .enterData {
@@ -204,15 +202,14 @@
     }
 
     .wrapper {
-        grid-template-rows: 160px 100px auto;
+        grid-template-rows: 220px 100px auto;
         grid-template-columns:  repeat(6, 200px);
     }
-
 
     .openList,
     .doneList {
         width: 590px;
-        height: 780px;
+        height: 770px;
         border-radius: 5px;
         overflow: hidden;
     }
