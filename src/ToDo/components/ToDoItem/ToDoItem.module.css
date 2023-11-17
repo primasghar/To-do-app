@@ -21,29 +21,25 @@
 }
 
 
-.delBtn {
+.delBtn,
+.shuffle{
     height: 32px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    box-shadow:  1px 1px 1px 1px black;
-}
 
+    border-radius: 5px;
+}
 .delBtn {
-    margin-right: 10px;
+    padding: 5px 10px;
 }
 
 .shuffle {
-    height: 32px;
     display: flex;
     flex-direction: column;
     padding: 0 10px;
-    border-radius: 5px;
-    box-shadow:  1px 1px 1px 1px black;
 }
 
 .shuffle:hover,
 .delBtn:hover {
-    transform: scale(1.1);
+    box-shadow:  1px 1px 1px 1px black;
 }
 
 .arrowLeft {
